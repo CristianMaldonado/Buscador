@@ -1,0 +1,33 @@
+<div class="row">
+  <div class="col-md-2">
+    <label for="moneda">Moneda</label>
+    <select name="moneda" id="moneda" [(ngModel)]="filtros.monedaEventos">
+      <option value="">Seleccionar</option>
+      <option value="ARS">PESO</option>
+      <option value="USD">DOLAR</option>
+    </select>
+  </div>
+  <div class="col-md-2">
+    <label for="tipo">Tipo</label>
+    <select name="tipo" id="tipo" [(ngModel)]="filtros.tipoEventos">
+        <option value="">Seleccionar</option>
+      <option value="1">TIPO 1</option>
+      <option value="2">TIPO 2</option>
+    </select>
+  </div>
+  <div class="col-md-2">
+    <label for="categoria">Categoria</label>
+    <select name="categoria" id="categoria" [(ngModel)]="filtros.categoriaEventos">
+        <option value="">Seleccionar</option>
+      <option value="c1">CATEG 1</option>
+      <option value="c2">CATEG 2</option>
+    </select>
+  </div>
+  <div class="col-md-2">
+    <a (click)="cerrar()">Cerrar busqueda avanzada</a>
+  </div>
+  <div class="col-md-3">
+      <button type="button" class="btn btn-primary ancho" (click)="buscarAvanzada()">Buscar</button>
+  </div>
+</div>
+

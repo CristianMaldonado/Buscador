@@ -1,0 +1,46 @@
+
+<div class="row">
+    <div class="col-md-3"></div>
+    <div class="col-md-6">
+        <input #texto class="textoBuscado" type="text" [(ngModel)]="buscadorTemplate.inputText" (keydown)="keyEnter($event)">
+    </div>
+    <div class="col-md-3"></div>
+</div>
+
+<div class="row separacion14" *ngIf="!mostrarAvanzada">
+    <div class="col-md-12 text-center">
+        <a (click)="mostrarBusquedaAvanzada()">Busqueda avanzada</a>
+    </div>
+</div>
+
+<div class="row separacion14" *ngIf="!mostrarAvanzada">
+    <div class="col-md-4"></div>
+    <div class="col-md-4 text-center">
+        <button type="button" class="btn btn-primary ancho" (click)="buscar()">Buscar</button>
+    </div>
+    <div class="col-md-4"></div>
+</div>
+
+<div class="separacion14" *ngIf="mostrarAvanzada">
+    <div [ngSwitch]="tipoBuscador">
+        <app-busqueda-avanzada-especie
+            *ngSwitchCase="'ESPECIES'"
+            [filtros]="buscadorTemplate"
+            (filtroAvanzada)="buscar()"
+            (cerrarBusquedaAvanzada)="ocultarAvanzada()"
+        ></app-busqueda-avanzada-especie>
+
+        <app-busqueda-avanzada-evento
+            *ngSwitchCase="'EVENTOS'"
+            [filtros]="buscadorTemplate"
+            (filtroAvanzada)="buscar()"
+            (cerrarBusquedaAvanzada)="ocultarAvanzada()"
+        ></app-busqueda-avanzada-evento>
+    </div>
+</div>
+
+<div class="row separacion47">
+    <div class="col-md-3">
+        <button type="button" class="btn btn-primary ancho" (click)="consultar()">Consultar</button>
+    </div>
+</div>

@@ -1,0 +1,14 @@
+
+
+.ancho {
+    width: 200px;
+}
+
+a:not([href]) {
+    cursor: pointer;
+    color: blue;
+}
+
+a:not([href]):hover {
+    color: green;
+}

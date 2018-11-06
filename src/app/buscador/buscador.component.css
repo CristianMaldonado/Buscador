@@ -1,0 +1,25 @@
+
+.textoBuscado {
+    width: 100%;    
+}
+
+.separacion14 {
+    margin-top: 14px;
+}
+
+.ancho {
+    width: 200px;
+}
+
+a:not([href]) {
+    cursor: pointer;
+    color: blue;
+}
+
+a:not([href]):hover {
+    color: green;
+}
+
+.separacion47 {
+    margin-top: 47px;
+}
