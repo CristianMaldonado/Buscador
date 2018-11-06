@@ -7,13 +7,13 @@
     <div class="col-md-3"></div>
 </div>
 
-<div class="row separacion14" *ngIf="!mostrarAvanzada">
+<div class="row separacion14" *ngIf="!buscadorTemplate.esAvanzada">
     <div class="col-md-12 text-center">
         <a (click)="mostrarBusquedaAvanzada()">Busqueda avanzada</a>
     </div>
 </div>
 
-<div class="row separacion14" *ngIf="!mostrarAvanzada">
+<div class="row separacion14" *ngIf="!buscadorTemplate.esAvanzada">
     <div class="col-md-4"></div>
     <div class="col-md-4 text-center">
         <button type="button" class="btn btn-primary ancho" (click)="buscar()">Buscar</button>
@@ -21,7 +21,7 @@
     <div class="col-md-4"></div>
 </div>
 
-<div class="separacion14" *ngIf="mostrarAvanzada">
+<div class="separacion14" *ngIf="buscadorTemplate.esAvanzada">
     <div [ngSwitch]="tipoBuscador">
         <app-busqueda-avanzada-especie
             *ngSwitchCase="'ESPECIES'"
@@ -36,11 +36,5 @@
             (filtroAvanzada)="buscar()"
             (cerrarBusquedaAvanzada)="ocultarAvanzada()"
         ></app-busqueda-avanzada-evento>
-    </div>
-</div>
-
-<div class="row separacion47">
-    <div class="col-md-3">
-        <button type="button" class="btn btn-primary ancho" (click)="consultar()">Consultar</button>
     </div>
 </div>

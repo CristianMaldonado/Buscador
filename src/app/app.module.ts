@@ -2,7 +2,6 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { PastillaComponent } from './pastilla/pastilla.component';
 import { ContenedorComponent } from './contenedor/contenedor.component';
 import { BuscadorComponent } from './buscador/buscador.component';
 import { BusquedaAvanzadaEspecieComponent } from './busqueda-avanzada-especie/busqueda-avanzada-especie.component';
@@ -11,8 +10,8 @@ import { TabContainerComponent } from './tab-container/tab-container.component';
 import { FormsModule } from "@angular/forms";
 import { RouterModule, Routes } from "@angular/router";
 import { HomeComponent } from './home/home.component';
-import { NgSwitch, NgSwitchCase } from '@angular/common';
 import { OtroComponent } from './otro/otro.component';
+import { ResultadoComponent } from './resultado/resultado.component';
 
 const routes: Routes = [
   {
@@ -32,14 +31,14 @@ const routes: Routes = [
 @NgModule({
   declarations: [
     AppComponent,
-    PastillaComponent,
     ContenedorComponent,
     BuscadorComponent,
     BusquedaAvanzadaEspecieComponent,
     BusquedaAvanzadaEventoComponent,
     TabContainerComponent,
     HomeComponent,
-    OtroComponent
+    OtroComponent,
+    ResultadoComponent
   ],
   imports: [
     BrowserModule,

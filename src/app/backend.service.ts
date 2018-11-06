@@ -1,22 +1,19 @@
 import { Injectable } from '@angular/core';
-import { resolve } from 'url';
-import { reject } from 'q';
+import { BehaviorSubject } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class BackendService {
 
-  constructor() { }
+  private observer$: BehaviorSubject<any> = new BehaviorSubject<any>(null);
 
-  error = { header: 'Error', data: ''}
+  notificarDatos(data: any) {
+    this.observer$.next(data);
+  }
 
-
-  getRespuesta() {
-    return new Promise(
-      (resolve, reject) => {
-        resolve(this.error)
-    })
+  getDatos() {
+    return this.observer$.asObservable();
   }
 
 }

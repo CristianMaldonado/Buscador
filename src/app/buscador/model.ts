@@ -7,12 +7,13 @@ export enum TipoBuscador {
 export class Buscador {
     
     inputText: string;
+    esAvanzada: boolean;
 
     constructor(texto?: string) {
         this.inputText = texto;
+        this.esAvanzada = false;
     }
 
-    
 }
 
 export class BuscadorAvanzadoEspecie extends Buscador{
@@ -27,6 +28,7 @@ export class BuscadorAvanzadoEspecie extends Buscador{
         this.tipo = '';
         this.categoria = '';
     }
+
 }
 
 export class BuscadorAvanzadoEventos extends Buscador {
@@ -41,4 +43,5 @@ export class BuscadorAvanzadoEventos extends Buscador {
         this.tipoEventos = '';
         this.categoriaEventos = '';
     }
+
 }
